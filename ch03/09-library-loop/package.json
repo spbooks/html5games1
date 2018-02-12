@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "pop-ex",
+  "version": "0.0.1",
+  "description": "MomPop game example",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "budo src/main.js:bundle.js --live -- -t [ babelify --presets [ env ] ]",
+    "build": "browserify src/main.js -o bundle.js -t [ babelify --presets [ env ] ]"
+  },
+  "keywords": [],
+  "author": "Mr Speaker",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^15.2.0",
+    "budo": "^11.0.1",
+    "eslint": "^4.16.0"
+  }
+}
