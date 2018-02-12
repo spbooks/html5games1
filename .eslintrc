@@ -1,0 +1,40 @@
+{
+  "parser": "babel-eslint",
+  "globals": {
+    "window": true,
+    "document": true,
+    "requestAnimationFrame": true,
+    "Image": true
+  },
+  "rules": {
+    "indent": [
+      2,
+      2,
+      {"SwitchCase": 1}
+    ],
+    "quotes": [
+      2,
+      "double"
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
+    "comma-dangle": 0,
+    "no-console": 0,
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": "eslint:recommended",
+  "plugins": [],
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
