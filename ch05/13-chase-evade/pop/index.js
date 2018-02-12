@@ -9,7 +9,6 @@ import math from "./utils/math.js";
 import MouseControls from "./controls/MouseControls.js";
 import Rect from "./Rect.js";
 import Sprite from "./Sprite.js";
-import State from "./State.js";
 import Text from "./Text.js";
 import Texture from "./Texture.js";
 import TileMap from "./TileMap.js";
@@ -28,7 +27,6 @@ export default {
   MouseControls,
   Rect,
   Sprite,
-  State,
   Text,
   Texture,
   TileMap,
