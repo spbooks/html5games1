@@ -1,0 +1,6 @@
+#board {
+  width: 640px;
+  height: 480px;
+  margin: auto;
+  border: 1px solid #000;
+}
