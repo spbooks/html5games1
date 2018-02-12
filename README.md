@@ -31,10 +31,8 @@ Each example package also includes a `npm run build` command that will transpile
 I'm organizing the code for each chapter. Still remaining:
 
 ```
-ch05/
-  13-chase-evade
-  14-state-machine
 ch06/*
 ch07/*
 ch08/*
+ch09/*
 ```
