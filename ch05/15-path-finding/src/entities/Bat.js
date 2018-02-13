@@ -3,7 +3,7 @@ const { Texture, TileSprite, entity, math, State } = pop;
 
 const texture = new Texture("res/images/bravedigger-tiles.png");
 
-const modes = {
+const states = {
   ATTACK: 0,
   EVADE: 1,
   WANDER: 2
@@ -24,7 +24,7 @@ class Bat extends TileSprite {
     this.target = target;
     this.waypoint = null;
 
-    this.state = new State(modes.ATTACK);
+    this.state = new State(states.ATTACK);
   }
 
   update(dt, t) {
@@ -38,36 +38,36 @@ class Bat extends TileSprite {
     let waypointDistance;
 
     switch (state.get()) {
-      case modes.ATTACK:
+      case states.ATTACK:
         xo = Math.cos(angle) * speed * dt;
         yo = Math.sin(angle) * speed * dt;
         if (distance < 60) {
-          state.set(modes.EVADE);
+          state.set(states.EVADE);
         }
         break;
-      case modes.EVADE:
+      case states.EVADE:
         xo = -Math.cos(angle) * speed * dt;
         yo = -Math.sin(angle) * speed * dt;
         if (distance > 120) {
           if (math.randOneIn(2)) {
-            state.set(modes.WANDER);
+            state.set(states.WANDER);
             this.waypoint = {
               x: pos.x + math.rand(-200, 200),
               y: pos.y + math.rand(-200, 200)
             };
           } else {
-            state.set(modes.ATTACK);
+            state.set(states.ATTACK);
           }
         }
         break;
-      case modes.WANDER:
+      case states.WANDER:
         waypointAngle = math.angle(waypoint, pos);
         waypointDistance = math.distance(pos, waypoint);
 
         xo = Math.cos(waypointAngle) * speed * dt;
         yo = Math.sin(waypointAngle) * speed * dt;
         if (waypointDistance < 60) {
-          state.set(modes.EVADE);
+          state.set(states.EVADE);
         }
         break;
     }
