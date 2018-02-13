@@ -16,8 +16,7 @@ class GameScreen extends Container {
     this.timer = this.add(
       new Text("time", { font: "24px sans-serif", fill: "#fff", align: "center" })
     );
-    this.timer.pos.x = this.w / 2;
-    this.timer.pos.y = 10;
+    this.timer.pos.set(this.w / 2, 20);
     this.reset();
   }
 

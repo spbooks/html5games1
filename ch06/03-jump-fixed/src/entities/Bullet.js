@@ -29,7 +29,6 @@ class Bullet extends TileSprite {
     pos.x += speed * dt * dir.x;
     pos.y += speed * dt * dir.y;
 
-    //this.rotation += Math.PI * 2 * dt;
     this.rotation += math.randf(-Math.PI, Math.PI) * dt;
 
     if ((this.life -= dt) < 0) {
