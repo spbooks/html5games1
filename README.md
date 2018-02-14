@@ -1,5 +1,7 @@
 # HTML5 Games: Novice to Ninja
 
+![HTML5 Games](https://user-images.githubusercontent.com/129330/36218826-9cdf69a0-1183-11e8-9822-a92fdc6cd9ac.png)
+
 Welcome to the [HTML5 Games: Novice to Ninja](https://www.sitepoint.com/premium/books/html5games1) code examples.
 
 Most of the examples (anything after chapter 03, example 06) use JavaScript native modules. If you are reading this in the future, then JavaScript modules are well supported by all browsers, and you can run any of the examples by viewing the `index-native.html` file.
