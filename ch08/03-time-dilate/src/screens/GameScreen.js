@@ -11,6 +11,7 @@ class GameScreen extends Container {
     super();
     this.w = game.w;
     this.h = game.h;
+    this.game = game;
     this.controls = controls;
     this.onGameOver = onGameOver;
     this.state = new State("READY");
@@ -31,7 +32,7 @@ class GameScreen extends Container {
     this.pickups = camera.add(new Container());
     this.player = camera.add(player);
 
-    // Baddies
+    // Bats
     const baddies = new Container();
     map.spawns.bats.forEach(({x, y}) => {
       const bat = baddies.add(new Bat(player));
@@ -76,6 +77,7 @@ class GameScreen extends Container {
     pickup.dead = true;
 
     camera.shake();
+    camera.flash();
 
     if (pickups.children.length === 1) {
       this.populate();
@@ -100,7 +102,7 @@ class GameScreen extends Container {
 
       case "PLAYING":
         super.update(dt, t);
-        this.updatePlaying();
+        this.updatePlaying(dt, t);
         break;
 
       case "GAMEOVER":
@@ -119,10 +121,13 @@ class GameScreen extends Container {
     state.update(dt);
   }
 
-  updatePlaying() {
-    const { baddies, player, pickups, state } = this;
+  updatePlaying(dt, t) {
+    const { baddies, player, pickups, state, game } = this;
+
+    game.speed = 0.5;
+
     baddies.map(b => {
-      // Unkillable... while we test.
+      // Unkillable while we test
       // if (entity.hit(player, b)) {
       //   state.set("GAMEOVER");
       // }

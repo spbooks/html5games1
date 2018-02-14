@@ -1,10 +1,12 @@
 import pop from "../../pop/index.js";
-const { Camera, Container, entity, State, Text } = pop;
+const { Camera, Container, entity, OneUp, State, Text, Texture, TileSprite, } = pop;
 import LevelMap from "../Level.js";
 import Player from "../entities/Player.js";
 import Pickup from "../entities/Pickup.js";
 import Bat from "../entities/Bat.js";
 import Totem from "../entities/Totem.js";
+
+const texture = new Texture("res/images/bravedigger-tiles.png");
 
 class GameScreen extends Container {
   constructor(game, controls, onGameOver) {
@@ -31,7 +33,7 @@ class GameScreen extends Container {
     this.pickups = camera.add(new Container());
     this.player = camera.add(player);
 
-    // Baddies
+    // Bats
     const baddies = new Container();
     map.spawns.bats.forEach(({x, y}) => {
       const bat = baddies.add(new Bat(player));
@@ -71,11 +73,20 @@ class GameScreen extends Container {
   }
 
   gotPickup(pickup) {
-    const { camera, pickups } = this;
+    const { camera, player, pickups } = this;
     this.score++;
     pickup.dead = true;
 
     camera.shake();
+    camera.flash();
+
+    // Make a coin to OneUp.
+    const coin = new TileSprite(texture, 48, 48);
+    coin.anims.add("spin", [5, 6, 7, 8].map(x => ({ x, y: 4 })), 0.1);
+    coin.anims.play("spin");
+    // OneUp it!
+    const one = this.add(new OneUp(coin));
+    one.pos.copy(player.pos);
 
     if (pickups.children.length === 1) {
       this.populate();
@@ -100,7 +111,7 @@ class GameScreen extends Container {
 
       case "PLAYING":
         super.update(dt, t);
-        this.updatePlaying();
+        this.updatePlaying(dt, t);
         break;
 
       case "GAMEOVER":
@@ -119,10 +130,11 @@ class GameScreen extends Container {
     state.update(dt);
   }
 
-  updatePlaying() {
+  updatePlaying(dt, t) {
     const { baddies, player, pickups, state } = this;
+
     baddies.map(b => {
-      // Unkillable... while we test.
+      // Unkillable while we test
       // if (entity.hit(player, b)) {
       //   state.set("GAMEOVER");
       // }
