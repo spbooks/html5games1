@@ -26,7 +26,7 @@ class CanvasRenderer {
 
       // Render the container children
       container.children.forEach(child => {
-        if (child.visible == false) {
+        if (child.visible == false || child.alpha === 0) {
           return;
         }
         ctx.save();
