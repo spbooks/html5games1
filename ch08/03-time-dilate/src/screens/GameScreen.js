@@ -1,6 +1,6 @@
 import pop from "../../pop/index.js";
 const { Camera, Container, entity, State, Text } = pop;
-import LevelMap from "../Level.js";
+import Level from "../Level.js";
 import Player from "../entities/Player.js";
 import Pickup from "../entities/Pickup.js";
 import Bat from "../entities/Bat.js";
@@ -17,7 +17,7 @@ class GameScreen extends Container {
     this.state = new State("READY");
 
     // Map, player, camera
-    const map = new LevelMap(game.w, game.h);
+    const map = new Level(game.w, game.h);
     const player = new Player(controls, map);
     player.pos.x = map.spawns.player.x;
     player.pos.y = map.spawns.player.y;

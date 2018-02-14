@@ -31,11 +31,10 @@ The example will be transpiled via Babel (into old days JavaScript) and a server
 Each example package also includes a `npm run build` command that will transpile the JavaScript into a single `build.js` file that can be run with the included `index.html` file, and deployed to servers etc.
 
 
-## Missing examples
+## Examples to come
 
-I'm organizing the code for each chapter. Still remaining:
+I'm organizing the code for each chapter. There's still a little tidying going on. Also, still remaining:
 
 ```
-ch08/13-23
 ch09/*
 ```
