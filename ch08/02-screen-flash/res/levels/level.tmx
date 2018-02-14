@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="16" tilewidth="32" tileheight="32" backgroundcolor="#000000" nextobjectid="12">
+ <tileset firstgid="1" name="tiles" tilewidth="32" tileheight="32" tilecount="50">
+  <image source="../images/tiles.png" width="320" height="160"/>
+  <tile id="20">
+   <properties>
+    <property name="walkable" value="true"/>
+   </properties>
+   <objectgroup draworder="index"/>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="cloud" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Level" width="25" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzTZGBg0KQTVqYBxmaHPBUxPjtEqYBHmh3caBibWbjkB5M/6GGHChrGZhYu+cHkj8Fuhy4BO2hdltC6TKQlBgBMqS8q
+  </data>
+ </layer>
+ <objectgroup name="Entities">
+  <object id="5" name="Hero" type="Player" gid="1" x="640" y="416" width="32" height="32"/>
+  <object id="6" type="Spikes" gid="6" x="512" y="192" width="32" height="32"/>
+  <object id="7" type="Ghost" gid="3" x="224" y="192" width="32" height="32"/>
+  <object id="8" type="Ghost" gid="3" x="224" y="192" width="32" height="32"/>
+  <object id="9" type="Ghost" gid="3" x="224" y="288" width="32" height="32"/>
+  <object id="10" type="Door" gid="34" x="672" y="416" width="32" height="32">
+   <properties>
+    <property name="spawnX" value="4"/>
+    <property name="spawnY" value="12"/>
+    <property name="toLevel" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
