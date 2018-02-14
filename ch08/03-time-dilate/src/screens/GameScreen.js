@@ -1,5 +1,5 @@
 import pop from "../../pop/index.js";
-const { Camera, Container, entity, State, Text } = pop;
+const { Camera, Container, entity, State, Text, math } = pop;
 import Level from "../Level.js";
 import Player from "../entities/Player.js";
 import Pickup from "../entities/Pickup.js";
@@ -15,6 +15,8 @@ class GameScreen extends Container {
     this.controls = controls;
     this.onGameOver = onGameOver;
     this.state = new State("READY");
+
+    this.time = 0;
 
     // Map, player, camera
     const map = new Level(game.w, game.h);
@@ -121,17 +123,13 @@ class GameScreen extends Container {
     state.update(dt);
   }
 
-  updatePlaying(dt, t) {
-    const { baddies, player, pickups, state, game } = this;
+  updatePlaying(dt) {
+    const { player, pickups, game } = this;
 
-    game.speed = 0.5;
-
-    baddies.map(b => {
-      // Unkillable while we test
-      // if (entity.hit(player, b)) {
-      //   state.set("GAMEOVER");
-      // }
-    });
+    // Sorry, can't use `t` directly as it is the "real time". Need to count time yourself.
+    this.time += dt;
+    game.speed = Math.max(0.8, game.speed + Math.sin(this.time / 0.3) * 0.05);
+    this.scoreText.text = game.speed.toFixed(2);
 
     // Collect pickup!
     entity.hits(player, pickups, pickup => this.gotPickup(pickup));
