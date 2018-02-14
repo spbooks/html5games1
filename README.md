@@ -2,11 +2,11 @@
 
 Welcome to the [HTML5 Games: Novice to Ninja](https://www.sitepoint.com/premium/books/html5games1) code examples.
 
-Most of the examples (anything after chapter 03, example 06) use JavaScript native modules. If you are reading this in the future, then JavaScript modules are well supported by all browsers, and you can run any of the examples by double-clicking the `index-native.html` file.
+Most of the examples (anything after chapter 03, example 06) use JavaScript native modules. If you are reading this in the future, then JavaScript modules are well supported by all browsers, and you can run any of the examples by viewing the `index-native.html` file.
 
-At the moment, the future is supported by Firefox (behind the about:config `dom.moduleScripts.enabled` flag).
+[Try the examples](https://spbooks.github.io/html5games1/). [under construction.gif].
 
-It is also supported by Chrome, Safari, and Edge: but you need to serve the example via web browser (JavaScript modules will only work via `http://` and not `file://` - so you can't just double-click and run it). There is a webserver in the root directory that you can install and run (via `npm`) with:
+They should run in all recent browsers (for Firefox it's enabled behind the about:config `dom.moduleScripts.enabled` flag). If you want to run them locally you need to serve the example via web browser (JavaScript modules will only work via `http://` and not `file://` - so you can't just double-click and run it). There is a webserver in the root directory that you can install and run (via `npm`) with:
 
 ```
 npm install
