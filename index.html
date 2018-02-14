@@ -39,8 +39,8 @@
         padding: 10px;
       }
       #sorry {
-        padding: 10px;
-        color: #833;
+        padding: 20px;
+        color: #a33;
         display: none;
       }
     </style>
@@ -52,6 +52,8 @@
       <div class="warning"><br/>UNDER CONSTRUCTION.gif</div>
         <div>This will be a list of all of the <a href="https://github.com/spbooks/html5games1">code examples</a> from the book <a href="https://www.sitepoint.com/premium/books/html5games1/">HTML5 Games: Novice to Ninja</a>.<br/><br/></div>
         <div>They are written using JavaScript modules, so you can "view-source" if you want to see the code.</div>
+        <div id="sorry">SORRY! It looks like your browser does not yet support JavaScript modules.
+          Examples after ch03, ex06 will not work. I will be adding some ES5 version of the examples shortly.</div>
         <div id="ex">
           <h3>Chapter 1</h3>
           <ul>
@@ -187,12 +189,9 @@
             <li>...more to come</li>
           </ul>
         </div>
-        <div id="sorry">SORRY! It looks like your browser does not yet support JavaScript modules.
-          I will be adding some ES5 version of the examples shortly.</div>
       </div>
     </div>
     <script nomodule>
-      document.querySelector("#ex").style.display = "none";
       document.querySelector("#sorry").style.display = "block";
     </script>
   </body>
