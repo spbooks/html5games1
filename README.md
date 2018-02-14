@@ -36,5 +36,5 @@ Each example package also includes a `npm run build` command that will transpile
 I'm organizing the code for each chapter. There's still a little tidying going on. Also, still remaining:
 
 ```
-ch09/*
+ch09/01-02,05-10
 ```
