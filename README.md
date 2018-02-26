@@ -2,7 +2,7 @@
 
 ![HTML5 Games](https://user-images.githubusercontent.com/129330/36218826-9cdf69a0-1183-11e8-9822-a92fdc6cd9ac.png)
 
-Hello and thanks for checking out [HTML5 Games: Novice to Ninja](https://www.sitepoint.com/premium/books/html5games1)! These are the code examples for the book. If you are reading this then you are among the first people in the world getting your hands dirty. I got a few friends to follow along and tell me where they got stuck, but there most likely still rough edges around the examples. If you can not get the code running, or there you find any inconsistencies and errors, either log an issue, or email me at mrspeaker@gmail.com (or @mrspeaker) and I'll try and help you out.
+Hello and thanks for checking out [HTML5 Games: Novice to Ninja](https://www.sitepoint.com/premium/books/html5games1)! These are the code examples for the book. If you are reading this then you are among the first people in the world getting your hands dirty. I had a few friends follow along and tell me where they got stuck, so I hope the code is clear - but there most likely still rough edges around the examples. If you can not get the code running, or there you find any inconsistencies and errors, either log an issue, or email me at mrspeaker@gmail.com (or @mrspeaker) and I'll try and help you out.
 
 Most of the examples (anything after chapter 03, example 06) use JavaScript native modules. If you are reading this in the future, then JavaScript modules are well supported by all browsers, and you can run any of the examples by viewing the `index-native.html` file.
 
