@@ -2,36 +2,50 @@
 
 ![HTML5 Games](https://user-images.githubusercontent.com/129330/36218826-9cdf69a0-1183-11e8-9822-a92fdc6cd9ac.png)
 
-Hello and thanks for checking out [HTML5 Games: Novice to Ninja](https://www.sitepoint.com/premium/books/html5games1)! These are the code examples for the book. If you are reading this then you are among the first people in the world getting your hands dirty. I had a few friends follow along and tell me where they got stuck, so I hope the code is clear - but one reader (thanks Jd) mentioned problems following along so I think there are still rough edges around the examples. If you can not get the code running, if you find any inconsistencies and errors, or you have suggestions then please either log an issue or email me at mrspeaker@gmail.com (or ping me @mrspeaker) and I'll try and help you out.
+Hello and thanks for checking out [HTML5 Games: Novice to Ninja](https://www.sitepoint.com/premium/books/html5games1)! These are the code examples for the book. If you are reading this then you are among the first people in the world getting your hands dirty. If you are have any issues getting the examples running, if you find any inconsistencies and errors, or you have suggestions then please either log an issue or email me at mrspeaker@gmail.com (or ping me @mrspeaker) and I'll try and help you out.
 
-Most of the examples (anything after chapter 03, example 06) use JavaScript native modules. If you are reading this in the future, then JavaScript modules are well supported by all browsers, and you can run any of the examples by viewing the `index-native.html` file.
+[Try the examples](https://spbooks.github.io/html5games1/).
 
-[Try the examples](https://spbooks.github.io/html5games1/). [under construction.gif].
+They will run in all recent browsers - check out all the examples and play some of the games!
 
-They should run in all recent browsers (for Firefox before version 60 it's enabled behind the about:config `dom.moduleScripts.enabled` flag). If you want to run them locally you need to serve the example via web browser (JavaScript modules will only work via `http://` and not `file://` - so you can't just double-click and run it). There is a webserver in the root directory that you can install and run (via `npm`) with:
+## Making your own games
+
+To modify the code and make your own game you'll need to be able to run it. Each example also includes an npm `package.json` file for converting the code into a single file that can be run in any browser. For each example you need to run:
+
+`npm install`
+
+You only have to do this once per example. This installs all the dependencies and files needed to run and package your game. If you the command:
+
+`npm start`
+
+It will start a webserver (at the URL http://localhost:9966/ by default). If you go to the URL you can test your changes.
+
+## Building for the outside world
+
+Once you've finished your game and are happy with your changes, you can run:
+
+`npm run build`
+
+Which will convert the code into a single `build.js` file that can be run with the included `index.html` file. These two files (along with any of your game assets and images) can then be deployed to a public server for everyone to play. If you make a game, please let me know on Twitter (@mrspeaker)!
+
+## Getting help
+
+Setting up a workable build system to run code can be the most frustrating aspect of JavaScript development. If you are having any trouble running or modifying the examples, either log an issue on the code repository, send me an email me at mrspeaker@gmail.com, or ping me @mrspeaker on twitter - and we'll get it sorted.
+
+## Using JavaScript Native Modules
+
+Recently, most browsers have began to support [JavaScript Native Modules](). this means the step of converting all the code into a single file is not necessary - you can just make changes to your code and see the results without even needing npm.
+
+(For Firefox before version 60 it's enabled behind the about:config `dom.moduleScripts.enabled` flag).
+
+This is really convenient and cool - however, if you want to run your games locally on your own computer they still need to be served by a webserver. This is because JavaScript modules will only work via `http://` and not `file://` - so you can't just double-click and run it. There is a webserver in the **root directory** (that is, in `html5games1/`) that you can install and run (via `npm`) with:
 
 ```
 npm install
 npm start
 ```
 
-This will run a server on http://localhost:9966/. If you browse here there will be links to each example (eventually! For now you will have to type the full URL. eg, `http://localhost:9966/ch04/05-rotate/index-native.html`).
-
-## Without JavaScript Module support
-
-If your browser doesn't yet support native modules, every example directory also has its own `package.json` file. For *every* example you will have to install and run:
-
-```
-npm install
-npm start
-```
-
-The example will be transpiled via Babel (into old days JavaScript) and a server will run (at http://localhost:9966 by default).
-
-## Building an example
-
-Each example package also includes a `npm run build` command that will transpile the JavaScript into a single `build.js` file that can be run with the included `index.html` file, and deployed to servers etc.
-
+This will run a server on http://localhost:9966/. If you browse here there will be links to each example.
 
 ## Examples to come
 
