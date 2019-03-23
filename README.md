@@ -2,7 +2,7 @@
 
 ![HTML5 Games](https://user-images.githubusercontent.com/129330/36218826-9cdf69a0-1183-11e8-9822-a92fdc6cd9ac.png)
 
-Hello and thanks for checking out [HTML5 Games: Novice to Ninja](https://www.sitepoint.com/premium/books/html5games1)! These are the code examples for the book. If you are reading this then you are among the first people in the world getting your hands dirty. If you are have any issues getting the examples running, if you find any inconsistencies and errors, or you have suggestions then please either log an issue or email me at mrspeaker@gmail.com (or ping me @mrspeaker) and I'll try and help you out.
+Hello and thanks for checking out [HTML5 Games: Novice to Ninja](https://www.sitepoint.com/premium/books/html5games1)! These are the code examples for the book. If you are reading this then you are among the first people in the world getting your hands dirty. If you have issues running the examples, find any inconsistencies and errors, or you have suggestions then please either log an issue or email me at mrspeaker@gmail.com (or ping me @mrspeaker), I will try to help.
 
 [Try the examples](https://spbooks.github.io/html5games1/).
 
@@ -14,11 +14,11 @@ To modify the code and make your own game you'll need to be able to run it. Each
 
 `npm install`
 
-You only have to do this once per example. This installs all the dependencies and files needed to run and package your game. If you the command:
+You only have to do this once per example. This installs all the dependencies and files needed to run and package your game. Use the command:
 
 `npm start`
 
-It will start a webserver (at the URL http://localhost:9966/ by default). If you go to the URL you can test your changes.
+It will start a webserver (at the URL http://localhost:9966/ by default). You can test your changes at the URL.
 
 ## Building for the outside world
 
@@ -30,7 +30,7 @@ Which will convert the code into a single `build.js` file that can be run with t
 
 ## Getting help
 
-Setting up a workable build system to run code can be the most frustrating aspect of JavaScript development. If you are having any trouble running or modifying the examples, either log an issue on the code repository, send me an email me at mrspeaker@gmail.com, or ping me @mrspeaker on twitter - and we'll get it sorted.
+Setting up a workable build system to run code can be the most frustrating aspect of JavaScript development. If you are having any trouble running or modifying the examples, either log an issue on the code repository, send me an email at mrspeaker@gmail.com, or ping me @mrspeaker on twitter - and we'll get it sorted.
 
 ## Using JavaScript Native Modules
 
