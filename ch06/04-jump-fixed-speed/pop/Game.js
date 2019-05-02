@@ -35,7 +35,11 @@ class Game {
       }
       this.renderer.render(this.scene);
     };
-    requestAnimationFrame(loopy);
+    const init = ms => {
+      last = ms / 1000;
+      requestAnimationFrame(loopy);
+    };
+    requestAnimationFrame(init);
   }
 }
 
