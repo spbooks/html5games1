@@ -24,7 +24,6 @@ class Squizz extends TileSprite {
     super.update(dt);
 
     const { pos, controls, speed, dir } = this;
-    super.update(dt);
 
     if ((this.nextCell -= dt) <= 0) {
       this.nextCell += speed;
